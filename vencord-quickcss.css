@@ -1,0 +1,17 @@
+:root {
+  --c-bluegray: #282c34;
+  --accent-rgb: 255, 207, 249;
+  --accent-hover: 40, 44, 52;
+  --title-bar: var(--c-bluegray);
+  --title-custom: var(--c-bluegray);
+  --list-item-default: var(--c-bluegray);
+  --bar-border-color: var(--c-bluegray);
+  --bar-color: var(--c-bluegray);
+  --chat-color: var(--c-bluegray);
+  --input-color: #ffcffa;
+  --sidebar-color: var(--c-bluegray);
+}
+
+.container-YkUktl {
+  background-color: var(--c-bluegray) !important;
+}
