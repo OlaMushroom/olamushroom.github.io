@@ -7,13 +7,13 @@
   --bluegray: #282c34;
   --accent-rgb: 255, 207, 249;
   --accent-hover: 40, 44, 52;
+  --list-item-default: var(--bluegray);
   --title-bar: var(--bluegray);
   --title-custom: var(--bluegray);
-  --list-item-default: var(--bluegray);
-  --bar-border-color: var(--bluegray);
   --bar-color: var(--bluegray);
-  --chat-color: var(--bluegray);
+  --bar-border-color: var(--bluegray);
   --sidebar-color: var(--bluegray);
+  --chat-color: var(--bluegray);
   --input-color: #ffcffa;
 }
 
