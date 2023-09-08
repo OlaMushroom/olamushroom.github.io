@@ -17,6 +17,14 @@
   --input-color: #ffcffa;
 }
 
+.container-1eFtFS {
+  background-image: url(https://nyanto.s-ul.eu/Oi3stxAg.png) !important;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
 .container-YkUktl {
   background-color: var(--bluegray) !important;
 }
