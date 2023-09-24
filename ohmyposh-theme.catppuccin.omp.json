@@ -1,0 +1,60 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 2,
+  "final_space": true,
+  "palette": {
+    "pink": "#F5BDE6",
+    "blue": "#8AADF4",
+    "lavender": "#B7BDF8",
+    "text": "#282c34"
+  },
+
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "executiontime",
+          "style": "diamond",
+          "leading_diamond": "",
+          "background": "p:pink",
+          "foreground": "p:text",
+          "template": " #{{ .PromptCount }} - {{ .FormattedMs }} ",
+          "properties": {"always_enabled": true}
+        },
+
+        {
+          "type": "time",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b4",
+          "background": "p:blue",
+          "foreground": "p:text",
+          "template": " {{ .CurrentDate | date .Format }} ",
+          "properties": {"time_format": "15:04:05.000"}
+        },
+
+        {
+          "type": "path",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b4",
+          "background": "p:lavender",
+          "foreground": "p:text",
+          "template": " {{ .Location }} "
+        }
+      ]
+    }
+  ],
+  "tooltips": [
+    {
+      "type": "sysinfo",
+      "tips": ["mem", "memory"],
+      "style": "diamond",
+      "leading_diamond": "",
+      "trailing_diamond": "",
+      "foreground": "p:text",
+      "background": "p:lavender",
+      "template": "   {{ .PhysicalPercentUsed }}% "
+    }
+  ]
+}
