@@ -1,0 +1,31 @@
+@import "https://unpkg.com/open-props";
+
+body {
+  background: black;
+  color: white;
+  font-family: 'Quicksand', sans-serif, serif;
+  font-size: 1.5rem;
+}
+
+#submit {
+  display: inline-flex;
+  white-space: nowrap;
+
+  font-family: 'Quicksand';
+  font-size: var(--font-size-fluid-1);
+  font-weight: var(--font-weight-6);
+
+  padding-inline: var(--size-3);
+  padding-block: var(--size-1);
+
+  background-color: transparent;
+  color: var(--blue-5);
+  border: var(--border-size-2) solid var(--blue-3);
+  border-radius: var(--radius-5);
+
+  &:is(:hover, :focus) {
+    cursor: pointer;
+    background-color: var(--blue-3);
+    color: var(--blue-0);
+  }
+}
