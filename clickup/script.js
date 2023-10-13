@@ -1,4 +1,4 @@
-async function getResponse (name, description = '',date_start, date_end) {
+async function getResponse (name, desc = '',dt_start, dt_end) {
   const resp = await fetch(
     `https://api.clickup.com/api/v2/list/900802317279/task`, {
       method: 'POST',
@@ -9,10 +9,10 @@ async function getResponse (name, description = '',date_start, date_end) {
 
       body: JSON.stringify({
         name: name,
-        description: description,
-        due_date: Date.parse(date_end),
+        description: desc,
+        due_date: Date.parse(dt_end),
         due_date_time: false,
-        start_date: Date.parse(date_start),
+        start_date: Date.parse(dt_start),
         start_date_time: false,
         notify_all: false,
         parent: null
@@ -28,9 +28,13 @@ form.addEventListener('submit', (e) => {
 
   const task = document.getElementById("task").value;
   const desc = document.getElementById("desc").value;
-  const date_start = document.getElementById("date_start").value;
-  const date_end = document.getElementById("date_end").value;
+  const dt_start = document.getElementById("dt_start").value;
+  const dt_end = document.getElementById("dt_end").value;
 
-  console.log(getResponse(task, desc, date_start, date_end));
-  alert(`Task added: ${task}\nStart date: ${date_start}\nDue date: ${date_end}`);
+  console.log(getResponse(task, desc, dt_start, dt_end));
+
+  document.getElementById("output_task").innerHTML = `Task: ${task}`
+  document.getElementById("output_desc").innerHTML = `Description: ${desc}`
+  document.getElementById("output_dt_start").innerHTML = `Start date: ${dt_start}`
+  document.getElementById("output_dt_end").innerHTML = `Due date: ${dt_end}`;
 })
