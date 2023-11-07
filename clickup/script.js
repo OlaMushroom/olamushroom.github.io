@@ -1,10 +1,12 @@
+let list_id = ""
+
 async function getResponse (name, desc = '',dt_start, dt_end) {
   const resp = await fetch(
-    `https://api.clickup.com/api/v2/list/900802317279/task`, {
+    `https://api.clickup.com/api/v2/list/${list_id}/task`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: 'pk_25571613_29CUOV70FLWK0ZU3QIVBD3U1YX54GW78'
+        Authorization: ''
       },
 
       body: JSON.stringify({
