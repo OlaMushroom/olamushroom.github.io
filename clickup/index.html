@@ -4,23 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <title>Website</title>
 </head>
 <body>
   <div>
     Link:
-    <a href="https://sharing.clickup.com/">Timeline</a>
+    <a class="link link-secondary" href="https://sharing.clickup.com/">Timeline</a>
   </div>
-  <br>
+
   <form id="form">
-    <div><input id="task" class="box" type="text" placeholder="Task name" required></div>
-    <div><input id="desc" class="box" type="text" placeholder="Some description"></div>
-    <div><input id="dt_start" class="box" type="date" required></div>
-    <div><input id="dt_end" class="box" type="date" required></div>
-    <br>
-    <div><input id="submit" type="submit" value="Submit"></div>
+    <div><input id="task" class="input input-bordered input-secondary rounded-full" type="text" placeholder="Task name" required></div>
+    <div><input id="desc" class="input input-bordered input-secondary rounded-full" type="text" placeholder="Some description"></div>
+    <div><input id="dt_start" class="input input-bordered input-secondary rounded-full" type="date" required></div>
+    <div><input id="dt_end" class="input input-bordered input-secondary rounded-full" type="date" required></div>
+    <div><button id="submit" class="btn btn-secondary rounded-full" type="submit">Button</button></div>
   </form>
-  <br>
+
   <div id="output_task" type="text"></div>
   <div id="output_desc" type="text"></div>
   <div id="output_dt_start" type="date"></div>
