@@ -27,13 +27,17 @@ async function getResponse (name, desc = '',dt_start, dt_end) {
 const form = document.getElementById("form");
 form.addEventListener('submit', (e) => {
   e.preventDefault();
+  document.getElementById("submit").innerHTML = `<span class="loading loading-infinity loading-lg"></span>`;
 
   const task = document.getElementById("task").value;
   const desc = document.getElementById("desc").value;
   const dt_start = document.getElementById("dt_start").value;
   const dt_end = document.getElementById("dt_end").value;
 
-  console.log(getResponse(task, desc, dt_start, dt_end));
+  try {
+    const data = getResponse(task, desc, dt_start, dt_end);
+    console.log(data);
+  } catch (error) { console.error(error); }
 
   document.getElementById("output_task").innerHTML = `Task: ${task}`
   document.getElementById("output_desc").innerHTML = `Description: ${desc}`

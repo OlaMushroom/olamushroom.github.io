@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dracula">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <title>Website</title>
+  <title>Clickup Timeline</title>
 </head>
 <body>
   <div>
@@ -15,20 +15,22 @@
   </div>
 
   <form id="form">
-    <div><input id="task" class="input input-bordered input-secondary rounded-full" type="text" placeholder="Task name" required></div>
-    <div><input id="desc" class="input input-bordered input-secondary rounded-full" type="text" placeholder="Some description"></div>
-    <div><input id="dt_start" class="input input-bordered input-secondary rounded-full" type="date" required></div>
-    <div><input id="dt_end" class="input input-bordered input-secondary rounded-full" type="date" required></div>
-    <div><button id="submit" class="btn btn-secondary rounded-full" type="submit">Submit</button></div>
+    <div><input id="task" class="input input-bordered input-secondary rounded-full w-full" type="text" placeholder="Task name" required></div>
+    <div><input id="desc" class="input input-bordered input-secondary rounded-full w-full" type="text" placeholder="Some description"></div>
+
+    <div class="flex">
+      <div class="w-1/2"><input id="dt_start" class="input input-bordered input-secondary rounded-full w-full" type="date" required></div>
+      <div class="w-1/2"><input id="dt_end" class="input input-bordered input-secondary rounded-full w-full" type="date" required></div>
+    </div>
+    
+    <div class="flex justify-center"><button id="submit" class="btn btn-secondary rounded-full w-1/2 text-white" type="submit">Submit</button></div>
   </form>
 
-  <div id="output_task" type="text"></div>
-  <div id="output_desc" type="text"></div>
-  <div id="output_dt_start" type="date"></div>
-  <div id="output_dt_end" type="date"></div>
+  <div id="output_task" class="text-center type="text"></div>
+  <div id="output_desc" class="text-center type="text"></div>
+  <div id="output_dt_start" class="text-center type="date"></div>
+  <div id="output_dt_end" class="text-center type="date"></div>
   
-  <!--
   <script src="script.js"></script>
-  -->
 </body>
 </html>
