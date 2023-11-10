@@ -1,4 +1,7 @@
-body {
-  background: black;
+html, body {
   color: white;
+}
+
+* {
+  margin: 0.5rem;
 }
