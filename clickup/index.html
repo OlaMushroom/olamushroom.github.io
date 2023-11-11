@@ -4,25 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Clickup Timeline</title>
 </head>
 <body>
-  <div class="text-center">Link:
-    <a class="link link-secondary" href="https://sharing.clickup.com/">Timeline</a>
+  <div class="flex justify-center">
+    <a href="https://sharing.clickup.com/">
+      <button class="btn btn-secondary rounded-full w-fit">Timeline</button>
+    </a>
   </div>
 
   <form id="form">
-    <div><input id="task" class="input input-bordered input-secondary rounded-full w-full" type="text" placeholder="Task name" required></div>
-    <div><input id="desc" class="input input-bordered input-secondary rounded-full w-full" type="text" placeholder="Some description"></div>
+    <div class="flex">
+      <div class="w-full"><input id="task" class="input input-bordered input-secondary rounded-full w-full" type="text" placeholder="Task name" required></div>
+    </div>
+
+    <div class="flex">
+      <div class="w-full"><input id="desc" class="input input-bordered input-secondary rounded-full w-full" type="text" placeholder="Some description"></div>
+    </div>
 
     <div class="flex">
       <div class="w-1/2"><input id="dt_start" class="input input-bordered input-secondary rounded-full w-full" type="date" required></div>
       <div class="w-1/2"><input id="dt_end" class="input input-bordered input-secondary rounded-full w-full" type="date" required></div>
     </div>
     
-    <div class="flex justify-center"><button id="submit" class="btn btn-secondary rounded-full w-1/2 text-white" type="submit">Submit</button></div>
+    <div class="flex justify-center">
+      <button id="submit" class="btn btn-secondary rounded-full w-1/2 text-white" type="submit">Submit</button>
+    </div>
   </form>
 
   <div id="output_task" class="text-center" type="text"></div>
