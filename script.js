@@ -5,8 +5,9 @@ if (spotify_np !== null) {
   <div class="card w-96 image-full">
     <figure><img src="${spotify_np['album_art_url']}" alt="Album art" /></figure>
     <div class="card-body">
-      <h2 class="card-title">${spotify_np['song']}</h2>
-      <h3>${spotify_np['artist']}</h3>
+      <h1 class="card-title text-2xl">Now playing</h1>
+      <a class="link-hover text-xl" href="https://open.spotify.com/track/${spotify_np['track_id']}">${spotify_np['song']}</a>
+      <p>${spotify_np['artist']}</p>
     </div>
   </div>
   `
