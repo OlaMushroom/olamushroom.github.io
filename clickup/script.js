@@ -1,4 +1,4 @@
-const list_id = ""
+const list_id = '';
 async function getResponse (name, desc = '',dt_start, dt_end) {
   const resp = await fetch(
     `https://api.clickup.com/api/v2/list/${list_id}/task`, {
@@ -33,8 +33,11 @@ form.addEventListener('submit', (e) => {
     const data = getResponse(task, desc, dt_start, dt_end);
     console.log(data);
   } catch (error) { console.error(error); }
-  document.getElementById("output_task").innerHTML = `Task: ${task}`
-  document.getElementById("output_desc").innerHTML = `Description: ${desc}`
-  document.getElementById("output_dt_start").innerHTML = `Start date: ${dt_start}`
-  document.getElementById("output_dt_end").innerHTML = `Due date: ${dt_end}`;
+  document.getElementById("output").innerHTML = `
+    <div class="stats stats-vertical"><div class="stat place-items-center">
+      <div class="stat-title">Task: ${task}</div>
+      <div class="stat-desc">Description: ${desc}</div>
+      <div class="stat-desc">Date: ${dt_start} to ${dt_end}</div>
+    </div></div>
+  `
 })
