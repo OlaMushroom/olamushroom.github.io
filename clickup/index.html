@@ -9,34 +9,20 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <div class="flex justify-center">
-    <a class="btn btn-secondary rounded-full w-fit" href="https://sharing.clickup.com/">Timeline</a>
-  </div>
-
+  <div class="flex justify-center"><a class="btn btn-secondary rounded-full w-fit" href="https://sharing.clickup.com/">Timeline</a></div>
   <form id="form">
-    <div class="flex">
-      <div class="w-full"><input id="task" class="input input-bordered input-secondary rounded-full w-full" type="text" placeholder="Task name" required></div>
-    </div>
-
-    <div class="flex">
-      <div class="w-full"><input id="desc" class="input input-bordered input-secondary rounded-full w-full" type="text" placeholder="Some description"></div>
-    </div>
-
+    <div class="flex"><div class="w-full"><input id="task" class="input input-bordered input-secondary rounded-full w-full" type="text" placeholder="Task name" required></div></div>
+    <div class="flex"><div class="w-full"><input id="desc" class="input input-bordered input-secondary rounded-full w-full" type="text" placeholder="Some description"></div></div>
     <div class="flex">
       <div class="w-1/2"><input id="dt_start" class="input input-bordered input-secondary rounded-full w-full" type="date" required></div>
       <div class="w-1/2"><input id="dt_end" class="input input-bordered input-secondary rounded-full w-full" type="date" required></div>
     </div>
-    
-    <div class="flex justify-center">
-      <button id="submit" class="btn btn-secondary rounded-full w-1/2 text-white" type="submit">Submit</button>
-    </div>
+    <div class="flex justify-center"><button id="submit" class="btn btn-secondary rounded-full w-1/2 text-white" type="submit">Submit</button></div>
   </form>
-
   <div id="output_task" class="text-center"></div>
   <div id="output_desc" class="text-center"></div>
   <div id="output_dt_start" class="text-center"></div>
   <div id="output_dt_end" class="text-center"></div>
-  
   <script src="script.js"></script>
 </body>
 </html>
