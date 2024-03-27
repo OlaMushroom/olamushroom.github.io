@@ -2,7 +2,13 @@ const user_id = '608876620417335337';
 const response = await (await fetch(`https://api.lanyard.rest/v1/users/${user_id}`)).json();
 const activities = response['data']['activities'];
 if (activities.length > 0) {
-  if (activities.length > 1 || activities[0]['name'] !== 'Spotify') { document.getElementById("lanyard-profile-readme").innerHTML = `<a href="https://github.com/cnrad/lanyard-profile-readme"><img alt="lanyard-profile-readme" src="https://lanyard.cnrad.dev/api/${user_id}?theme=dark&bg=1a1b27&hideProfile=true"></a>` }//* &idleMessage=Whacha%20lookin'%20at%20(ﾉ*ФωФ)ﾉ
+  if (activities.length > 1 || activities[0]['name'] !== 'Spotify') {
+    document.getElementById("lanyard-profile-readme").innerHTML = `
+      <a href="https://github.com/cnrad/lanyard-profile-readme">
+        <img alt="lanyard-profile-readme" src="https://lanyard.cnrad.dev/api/${user_id}?theme=dark&bg=1a1b27&hideProfile=true">
+      </a>
+    ` //* &idleMessage=Whacha%20lookin'%20at%20(ﾉ*ФωФ)ﾉ
+  }
   const now_playing = response['data']['spotify'];
   if (now_playing !== null) {
     document.getElementById("card-spotify").innerHTML = `
